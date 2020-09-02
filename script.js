@@ -3,10 +3,14 @@ const buttons = document.querySelectorAll("button");
 const gameplay = document.querySelector(".gameplay");
 const userPlay = document.querySelector(".userPlay");
 const res = document.querySelector(".res");
-let players = [];
-let deals = [];
 
 let deck = [];
+let players = [];
+let deals = [];
+let round = 0;
+let inplay = false;
+
+
 const ranks = [2,3,4,5,6,7,8,9,10, "J", "Q", "K", "A"];
 const figures = ["hearts", "diams", "clubs", "spades"];
 
@@ -22,6 +26,18 @@ function playGame(e){
         startGame();
 
     }
+    if(temp == "Next round"){
+        let tempRuns = document.querySelector("input").value;
+        res.innerHTML = "";
+        round = 0;
+        for(let x = 0; x<tempRuns; x++){
+            if(inplay){
+                message.innerHTML ="Round " + (x+1);
+                makeCards();
+            }
+        }
+
+    }
 }
 
 function btnToggle(){
@@ -30,16 +46,21 @@ function btnToggle(){
 }
 
 function startGame(){
+    inplay = true;
     buildDeck();
 
     let numberPlayers = document.querySelector("input").value;
     createPlayers(numberPlayers);
     dealCards(0);
     makeCards();
+    playGame();
     console.log(deck);
     console.log(players);
     document.querySelector("input").value = "1";
 }
+
+
+
 
 function makeCards(){
     let tempHolder = [];
@@ -49,6 +70,7 @@ function makeCards(){
     }
     let playoff = [];
     for(let x=0; x < players.length; x++){
+        players[x].innerHTML = "";
         let card = deals[x].shift();
         if(currWinner.high == card.value){
             if(playoff.length == 0){
@@ -82,6 +104,7 @@ function makeCards(){
 function updater(winner, tempHolder){
     players.forEach(player => {
         // player.style.border = "2px solid red";
+        player.style.border = "none";
         player.style.backgroundColor= "#00b846";
     });
     
@@ -151,7 +174,6 @@ function dealCards(playerCard){
         deals[playerCard].push(card)
         playerCard++;
         return dealCards(playerCard);
-        console.log(card)
     }else{
         message.textContent= "cards dealt now";
         return;

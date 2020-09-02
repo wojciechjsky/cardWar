@@ -1,9 +1,20 @@
 /* body{
     background-image: url("pexels-pixabay-326311.jpg");
 } */
+.bigContainer{
+    display: flex;
+}
+.leftContainer{
+    /* width: 20vw;
+    height: 50vh; */
+    margin-left:  5vw;
+    /* background-color: gray; */
+    margin-top: 10vh;
+}
 .container{
-    margin-top:10vh !important;
+    /* margin-top:5vh !important; */
     margin-bottom:10vh !important;
+    /* margin-left:35vw !important; */
     padding-top: 20vh;
     padding-bottom: 20vh;
     border-radius: 20%;
@@ -14,6 +25,12 @@
 }
 .hide{
     display: none;
+}
+ .btn{
+    margin-left: 20vw;
+}
+.btn-danger{
+    min-width: 106px ;
 }
 
 .player{

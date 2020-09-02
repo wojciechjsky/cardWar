@@ -1,13 +1,16 @@
-/* body{
-    background-image: url("pexels-pixabay-326311.jpg");
-} */
+body{
+    background-image: url("https://image.freepik.com/free-photo/wooden-texture_1208-334.jpg");
+}
 .bigContainer{
     display: flex;
 }
 .leftContainer{
     /* width: 20vw;
     height: 50vh; */
-    margin-left:  5vw;
+    /* display: inline-block; */
+    margin-left: 10vw;
+    margin-right:  5vw;
+    /* padding-left:  10vw; */
     /* background-color: gray; */
     margin-top: 10vh;
 }
@@ -15,6 +18,7 @@
     /* margin-top:5vh !important; */
     margin-bottom:10vh !important;
     /* margin-left:35vw !important; */
+    margin-right: 20vw !important;
     padding-top: 20vh;
     padding-bottom: 20vh;
     border-radius: 20%;
@@ -26,9 +30,7 @@
 .hide{
     display: none;
 }
- .btn{
-    margin-left: 20vw;
-}
+
 .btn-danger{
     min-width: 106px ;
 }
@@ -90,4 +92,14 @@
 .stats{
     margin-top: 25px;
     font-size: 0.8em;
+}
+.message{
+    margin-left:10vw;
+}
+.startInput{
+    margin-left: 10vw;
+}
+.btn-danger{
+    margin-top:1vh;
+    margin-left: 10vw;
 }

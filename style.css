@@ -1,0 +1,106 @@
+body{
+    background-image: url("https://image.freepik.com/free-photo/wooden-texture_1208-334.jpg");
+}
+.bigContainer{
+    display: flex;
+}
+.leftContainer{
+    /* width: 20vw;
+    height: 50vh; */
+    /* display: inline-block; */
+    margin-left: 10vw;
+    margin-right:  5vw;
+    /* padding-left:  10vw; */
+    /* background-color: gray; */
+    margin-top: 10vh;
+}
+.container{
+    /* margin-top:5vh !important; */
+    margin-bottom:10vh !important;
+    /* margin-left:35vw !important; */
+    margin-right: 20vw !important;
+    padding-top: 10vh;
+    padding-bottom: 20vh;
+    min-height: 600px;
+    border-radius: 20%;
+    border: solid brown 25px;
+    color:white;
+    background-color: #00b846;
+
+}
+.hide{
+    display: none;
+}
+
+.btn-danger{
+    min-width: 106px ;
+}
+
+.player{
+    display: inline-block;
+    color:black;
+    font-weight: 700;
+    width: 200px;
+    height: 200px;
+    vertical-align: middle;
+    text-align: center;
+    margin-bottom:10vh !important;
+    font-size: 2em;
+    background-color: #00b846;
+    /* border: 1px solid black; */
+}
+
+.card{
+
+    display: block;
+    margin:auto;
+    padding:7px;
+    color: black;
+    height: 110px;
+    width: 80px;
+    margin-top: 10px;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 5px 10px #333;
+}
+
+.big{
+
+    font-size:1.5em;
+    text-align: center;
+    line-height: 20px;
+    margin-top: 20px;
+    display: block;
+}
+.red{
+    color:red;
+}
+.tinyTopLeft{
+    font-size: 0.6em;
+    text-align: left;
+    /* vertical-align: top; */
+    line-height: 15px;
+    display: block;
+}
+.tinyBotRight{
+    font-size: 0.6em;
+    text-align: right;
+    margin-top:20px;
+    display: block;
+}
+
+.stats{
+    margin-top: 25px;
+    font-size: 0.8em;
+}
+.message{
+    margin-left:10vw;
+}
+.startInput{
+    margin-left: 10vw;
+}
+.btn-danger{
+    margin-top:1vh;
+    margin-left: 10vw;
+}

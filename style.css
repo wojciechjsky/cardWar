@@ -19,8 +19,9 @@ body{
     margin-bottom:10vh !important;
     /* margin-left:35vw !important; */
     margin-right: 20vw !important;
-    padding-top: 20vh;
+    padding-top: 10vh;
     padding-bottom: 20vh;
+    min-height: 600px;
     border-radius: 20%;
     border: solid brown 25px;
     color:white;

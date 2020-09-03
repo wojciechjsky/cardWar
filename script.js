@@ -14,12 +14,12 @@ let deals = [];
 let round = 0;
 let inplay = false;
 let total = 0;
-
 let logs = [];
 
 
 
 buttons.forEach(function (item) {
+
     item.addEventListener("click", playGame);
 })
 
@@ -27,8 +27,9 @@ function playGame(e) {
     let temp = e.target.textContent;
     if (temp == "Start") {
         message.style.color = "black";
-        btnToggle();
+        
         startGame();
+        btnToggle();
     }
     if (temp == "Next round") {
         let tempRuns = document.querySelector("input").value;
@@ -41,6 +42,17 @@ function playGame(e) {
             }
         }
     }
+}
+function reset(){
+    console.log("dziala")
+    deck = [];
+    players = [];
+    deals = [];
+    round = 0;
+    inplay = false;
+    total = 0;
+    logs =  [];
+    startGame();
 }
 
 function btnToggle() {
